@@ -19,7 +19,7 @@ export default (user) => {
         type: USER_SIGNED_UP,
         payload: response.data
        })
-      history.push('/sign-in')
+      history.push('/')
     })
     .catch((error) => {
       dispatch(loadError(error))

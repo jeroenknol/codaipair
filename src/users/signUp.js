@@ -55,7 +55,7 @@ export class SignUp extends PureComponent {
   validateName() {
     const { name } = this.refs
 
-    if (name.value.length > 1) {
+    if (name.getValue().length > 1) {
       this.setState({
         nameError: null
       })
@@ -71,14 +71,14 @@ export class SignUp extends PureComponent {
   validateEmail() {
     const { email } = this.refs
 
-    if (email.value.match(/^[a-z0-9.\_-]+@[a-z0-9.\_-]+\.[a-z0-9.\_-]+$/)) {
+    if (email.getValue().match(/^[a-z0-9.\_-]+@[a-z0-9.\_-]+\.[a-z0-9.\_-]+$/)) {
       this.setState({
         emailError: null
       })
       return true
     }
 
-    if (email.value === '') {
+    if (email.getValue() === '') {
       this.setState({
         emailError: 'Please provide your email address'
       })
@@ -94,14 +94,14 @@ export class SignUp extends PureComponent {
   validatePassword() {
     const { password, passwordConfirmation } = this.refs
 
-    if (password.value.length < 6) {
+    if (password.getValue().length < 6) {
       this.setState({
         passwordError: 'Password is too short'
       })
       return false
     }
 
-    if (password.value.match(/[a-zA-Z]+/) && password.value.match(/[0-9]+/)) {
+    if (password.getValue().match(/[a-zA-Z]+/) && password.getValue().match(/[0-9]+/)) {
       this.setState({
         passwordError: null
       })
@@ -117,7 +117,7 @@ export class SignUp extends PureComponent {
   validatePasswordConfirmation() {
     const { password, passwordConfirmation } = this.refs
 
-    if (password.value === passwordConfirmation.value) {
+    if (password.getValue() === passwordConfirmation.getValue()) {
       this.setState({
         passwordConfirmationError: null
       })

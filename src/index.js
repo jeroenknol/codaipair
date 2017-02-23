@@ -10,6 +10,7 @@ injectTapEventPlugin()
 import App from './App'
 import SignUp from './users/signUp'
 import SignIn from './users/signIn'
+import Sandbox from './users/sandbox'
 
 ReactDOM.render(
   <Provider store={store}>
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path="/" component={App}>
         <IndexRoute component={SignIn} />
         <Route path="/sign-up" component={SignUp} />
+        <Route path="/sandbox" component={Sandbox} />
       </Route>
     </Router>
   </Provider>,

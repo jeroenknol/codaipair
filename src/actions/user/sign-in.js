@@ -3,6 +3,8 @@ import loadError from '../load/error'
 import loadSuccess from '../load/success'
 import loading from '../loading'
 import { history } from '../../store'
+
+
 export const USER_SIGNED_IN = 'USER_SIGNED_IN'
 
 const api = new API()
@@ -18,7 +20,8 @@ export default (user) => {
         type: USER_SIGNED_IN,
         payload: response.data
       })
-      history.push('/')
+  
+      history.push('/sandbox')
     })
     .catch((error) => {
       dispatch(loadError(error))
