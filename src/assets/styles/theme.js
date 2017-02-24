@@ -2,27 +2,25 @@ import mui from 'material-ui'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 
 // Colors
-const green        = '#00AA86'
-const red          = '#D32F2F'
-const darkRed      = '#C1272D'
+const eggplant     = '#49274A'
+const grape        = '#94618E'
+const sand         = '#F4DECB'
+const shell        = '#F8EEE7'
 const white        = '#ffffff'
-const black        = '#000000'
-const darkGrey     = '#757575'
-const grey         = '#DEDEDE'
-const grey50       = 'rgba(222, 222, 222, 0.5)'
-const grey30       = 'rgba(222, 222, 222, 0.7)'
+const darkGrey     = '#3d3d3d'
+const grape50      = 'rgba(148, 97, 142, 0.5)'
 
 // Palette
 export const palette = {
-  primary1Color: red,
-  primary2Color: green,
-  primary3Color: green,
-  accent1Color: green,
-  textColor: black,
+  primary1Color: eggplant,
+  primary2Color: sand,
+  primary3Color: sand,
+  accent1Color: grape,
+  textColor: darkGrey,
   alternateTextColor: white,
   canvasColor: white,
-  borderColor: grey,
-  disabledColor: grey30
+  borderColor: grape,
+  disabledColor: grape50
 }
 
 export default getMuiTheme({ palette })
